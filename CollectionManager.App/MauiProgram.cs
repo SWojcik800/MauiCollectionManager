@@ -18,8 +18,9 @@ namespace CollectionManager.App
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
-            builder.Services.RegisterViews();
             builder.Services.RegisterServices();
+            builder.Services.RegisterViewModels();
+            builder.Services.RegisterViews();
 
 #if DEBUG
             builder.Logging.AddDebug();

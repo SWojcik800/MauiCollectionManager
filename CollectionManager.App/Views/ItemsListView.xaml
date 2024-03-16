@@ -12,7 +12,7 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
-        <ListView ItemsSource="{Binding Items}">
+        <ListView ItemsSource="{Binding Items}" RefreshCommand="{Binding LoadItemsCommand}" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

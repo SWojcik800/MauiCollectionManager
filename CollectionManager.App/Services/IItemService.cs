@@ -2,7 +2,7 @@
 
 namespace CollectionManager.App.Services
 {
-    internal interface IItemService
+    public interface IItemService
     {
         Task<List<ItemModel>> ListItems();
     }

@@ -9,7 +9,7 @@ namespace CollectionManager.App.Services
 {
     internal sealed class ItemService : IItemService
     {
-        private readonly List<ItemModel> _items = new()
+        public readonly List<ItemModel> _items = new()
         {
             new ()
             {

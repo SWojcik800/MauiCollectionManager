@@ -1,13 +1,15 @@
+using CollectionManager.App.Services;
 using CollectionManager.App.ViewModels;
 
 namespace CollectionManager.App.Views;
 
 public partial class ItemsListView : ContentPage
 {
-	public ItemsListView()
+	public ItemsListView(ItemsListViewModel viewModel)
 	{
         InitializeComponent();
-		BindingContext = new ItemsListViewModel();
+		viewModel.LoadItemsCommand.ExecuteAsync(null);
+		BindingContext = viewModel;
 
 	}
 }

@@ -1,4 +1,5 @@
-﻿using CollectionManager.App.Views;
+﻿using CollectionManager.App.ViewModels;
+using CollectionManager.App.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,12 @@ namespace CollectionManager.App.Services
     {
         public static void RegisterServices(this IServiceCollection services)
         {
-            services.AddSingleton<ItemService, ItemService>();
+            services.AddSingleton<IItemService, ItemService>();
+        }
+
+        public static void RegisterViewModels(this IServiceCollection services)
+        {
+            services.AddSingleton<ItemsListViewModel>();
         }
 
         public static void RegisterViews(this IServiceCollection services)
