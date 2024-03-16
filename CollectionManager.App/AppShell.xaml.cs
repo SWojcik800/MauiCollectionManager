@@ -12,6 +12,8 @@ namespace CollectionManager.App
         {
             InitializeComponent();
 
+            BindingContext = this;
+
             RegisterRoutes();
 
         }
