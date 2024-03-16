@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Maui;
+﻿using CollectionManager.App.Services;
+using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 
 namespace CollectionManager.App
@@ -17,8 +18,11 @@ namespace CollectionManager.App
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            builder.Services.RegisterViews();
+            builder.Services.RegisterServices();
+
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();
